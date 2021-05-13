@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'userapp'
+    'userapp',
 ]
 
 MIDDLEWARE = [
@@ -127,4 +127,4 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# AUTH_USER_MODEL = 'authors.CustomUser'
+AUTH_USER_MODEL = 'userapp.UserModelSet'

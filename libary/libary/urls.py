@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-# from authors.views import MyUserModelViewSet
+from userapp.views import UserMainModelViewSet
 
 router = DefaultRouter()
-# router.register('user', MyUserModelViewSet)
+router.register('user', UserMainModelViewSet)
 
 
 urlpatterns = [
