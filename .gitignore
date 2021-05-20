@@ -1,2 +1,4 @@
+__pycache__
 /DRFvenv/
 .idea
+db.sqlite3
