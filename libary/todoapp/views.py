@@ -4,11 +4,11 @@ from .models import ProjectModelSet, TodoModelSet
 from .serializers import ProjectMainModelSerializer, TodoMainModelSerializer
 
 
-class ProjectMainModelViewSet(ModelViewSet):
+class ProjectMainModelView(ModelViewSet):
     queryset = ProjectModelSet.objects.all()
     serializer_class = ProjectMainModelSerializer
 
 
-class TodoMainModelViewSet(ModelViewSet):
+class TodoMainModelView(ModelViewSet):
     queryset = TodoModelSet.objects.all()
     serializer_class = TodoMainModelSerializer
