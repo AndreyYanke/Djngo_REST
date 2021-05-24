@@ -11,9 +11,9 @@ class ProjectModelSet(models.Model):
         return self.name
 
 class TodoModelSet(models.Model):
-    project = models.ForeignKey(ProjectModelSet, on_delete=models.CASCADE)
-    text = models.TextField()
-    user = models.ManyToManyField(UserModelSet)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    active = models.BooleanField(default=True)
+    project = models.ForeignKey(ProjectModelSet, related_name='project',on_delete=models.CASCADE)
+    comment = models.TextField(verbose_name='текст',max_length=256, blank=True)
+    create = models.DateTimeField(verbose_name='создан',auto_now_add=True)
+    update = models.DateTimeField(verbose_name='обновил',auto_now=True)
+    user = models.ForeignKey(UserModelSet,related_name='user',on_delete=models.CASCADE)
+    active = models.BooleanField(verbose_name='активный',default=True)
