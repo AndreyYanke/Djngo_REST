@@ -5,18 +5,18 @@ from .serializers import TodoMainModelSerializer, ProjectMainModelSerializer
 from rest_framework.pagination import *
 
 
-class ProjectLimitOffsetPagination(LimitOffsetPagination):
-    default_limit = 10
-
-
-class TodoLimitOffsetPagination(LimitOffsetPagination):
-    default_limit = 20
+# class ProjectLimitOffsetPagination(LimitOffsetPagination):
+#     default_limit = 10
+#
+#
+# class TodoLimitOffsetPagination(LimitOffsetPagination):
+#     default_limit = 20
 
 
 class TodoMainModelViewSet(ModelViewSet):
     queryset = Todo.objects.all()
     serializer_class = TodoMainModelSerializer
-    pagination_class = TodoLimitOffsetPagination
+    # pagination_class = TodoLimitOffsetPagination
     filterset_fields = ['project']
     search_fields = ['username', 'email']
 
@@ -31,6 +31,6 @@ class TodoMainModelViewSet(ModelViewSet):
 class ProjectMainModelViewSet(ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectMainModelSerializer
-    pagination_class = ProjectLimitOffsetPagination
+    # pagination_class = ProjectLimitOffsetPagination
     filterset_fields = ['name']
 

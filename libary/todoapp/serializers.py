@@ -6,7 +6,7 @@ from .models import Todo,Project
 class ProjectMainModelSerializer(ModelSerializer):
     class Meta:
         model = Project
-        fields = ('name','user','url')
+        fields = ('id','name','user','url')
 
 
 class TodoMainModelSerializer(ModelSerializer):
