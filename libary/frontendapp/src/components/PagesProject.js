@@ -2,6 +2,7 @@ import React from 'react'
 import {useParams} from 'react-router-dom';
 
 
+
 const ProjecPagestItem = ({project}) => {
     return (
         <tr>
@@ -22,15 +23,9 @@ const ProjecPagestItem = ({project}) => {
 const ProjectPage = ({projects}) => {
 
     let {id} = useParams();
-    let project = projects.find((project) => project.id == id);
+    let project = projects.find((project) => project.id === id);
 
     return (
-        // <div>
-        //     {project.id}
-        //     {project.name}
-        // </div>
-
-
     <body>
     <header className="header">
 
