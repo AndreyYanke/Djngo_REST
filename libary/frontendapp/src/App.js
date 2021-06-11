@@ -96,7 +96,7 @@ class App extends React.Component {
 
     is_user() {
 
-        return this.state.token != '';
+        return this.state.token !== '';
     }
 
     logout() {
