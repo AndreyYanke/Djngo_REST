@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework_jwt',
     'django_filters',
     'drf_yasg',
-    'graphene_django'
+    'graphene',
+    'graphene_django',
 
 
     #my
@@ -127,6 +128,10 @@ USE_L10N = True
 USE_TZ = True
 
 
+GRAPHENE = {
+    'SCHEMA': 'todoapp.schema.schema'
+}
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -172,3 +177,4 @@ JWT_AUTH = {
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7), # default
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
+

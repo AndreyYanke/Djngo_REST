@@ -25,6 +25,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from graphene_django.views import GraphQLView
 
+
 schema_view = get_schema_view(
    openapi.Info(
       title='Users',
@@ -51,6 +52,7 @@ urlpatterns = [
     path('api/users/2.0/', include('userapp.urls', namespace='2.0')),
 
     path('graphql/', GraphQLView.as_view(graphiql=True)),
+
 
 
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

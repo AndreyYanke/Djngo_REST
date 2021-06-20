@@ -8,7 +8,7 @@ class Project(models.Model):
     url = models.URLField(verbose_name='Link', blank=True)
 
     def __str__(self):
-        return self.name
+        return f'{self.name}'
 
 
 class Todo(models.Model):

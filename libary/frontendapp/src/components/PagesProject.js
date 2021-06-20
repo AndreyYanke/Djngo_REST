@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {useParams} from 'react-router-dom';
 
 
@@ -23,9 +23,15 @@ const ProjecPagestItem = ({project}) => {
 const ProjectPage = ({projects}) => {
 
     let {id} = useParams();
-    let project = projects.find((project) => project.id === id);
+    let project = projects.find((project) => project.id == id);
 
     return (
+        // <div>
+        //     {project.id}
+        //     {project.name}
+        // </div>
+
+
     <body>
     <header className="header">
 
@@ -45,7 +51,6 @@ const ProjectPage = ({projects}) => {
         2021 CopyRight &copy;
     </footer>
     </body>
-
 
 )
 }
